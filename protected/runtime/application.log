@@ -1,0 +1,656 @@
+2021/01/12 14:28:55 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "gii". in /var/www/html/blog/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii')
+#1 /var/www/html/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/blog/testdrive/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/blog/testdrive/?r=gii
+---
+2021/01/12 14:29:12 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "gii". in /var/www/html/blog/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii')
+#1 /var/www/html/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/blog/testdrive/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii
+---
+2021/01/12 14:34:57 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /var/www/html/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /var/www/html/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /var/www/html/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /var/www/html/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /var/www/html/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /var/www/html/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /var/www/html/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /var/www/html/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /var/www/html/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /var/www/html/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /var/www/html/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /var/www/html/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /var/www/html/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /var/www/html/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/html/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:41:39 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:42:44 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:42:45 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:42:46 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:42:46 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:42:46 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:42:47 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:42:47 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:42:47 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:43:48 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:43:48 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:43:49 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:43:49 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:43:49 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:43:49 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:43:49 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:43:49 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:43:50 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:43:50 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:43:50 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:43:50 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:43:50 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:43:51 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:43:51 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:43:51 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:43:51 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:43:51 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/model
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/default/index
+---
+2021/01/13 13:44:21 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado in /opt/lampp/htdocs/blog/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/blog/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/blog/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/blog/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/blog/framework/gii/generators/crud/CrudCode.php(44): CModule->__get('db')
+#5 /opt/lampp/htdocs/blog/framework/web/CFormModel.php(40): CrudCode->init()
+#6 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /opt/lampp/htdocs/blog/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /opt/lampp/htdocs/blog/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /opt/lampp/htdocs/blog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /opt/lampp/htdocs/blog/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /opt/lampp/htdocs/blog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(283): CController->run('')
+#13 /opt/lampp/htdocs/blog/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/crud')
+#14 /opt/lampp/htdocs/blog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/blog/testdrive/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/testdrive/index.php?r=gii/crud
+HTTP_REFERER=http://localhost:8080/blog/testdrive/index.php?r=gii/controller
+---
+2021/01/13 13:46:08 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.Comentario' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `Comentario`.
+in /opt/lampp/htdocs/blog/testdrive/index.php (13)
