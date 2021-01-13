@@ -34,12 +34,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'data'); ?>
-		<?php echo $form->textField($model,'data'); ?>
-		<?php echo $form->error($model,'data'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'autor'); ?>
 		<?php echo $form->textField($model,'autor',array('size'=>60,'maxlength'=>100)); ?>
 		<?php echo $form->error($model,'autor'); ?>

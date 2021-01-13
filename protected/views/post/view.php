@@ -29,3 +29,5 @@ $this->menu=array(
 		'autor',
 	),
 )); ?>
+
+<a href=""> Cria comentario </a>

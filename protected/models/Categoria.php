@@ -5,6 +5,7 @@
  *
  * The followings are the available columns in table 'Categoria':
  * @property string $id
+ * @property string $nome
  *
  * The followings are the available model relations:
  * @property Post[] $posts
@@ -37,9 +38,11 @@ class Categoria extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('nome', 'required'),
+			array('nome', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id', 'safe', 'on'=>'search'),
+			array('id, nome', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,6 +65,7 @@ class Categoria extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
+			'nome' => 'Nome',
 		);
 	}
 
@@ -77,6 +81,7 @@ class Categoria extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id,true);
+		$criteria->compare('nome',$this->nome,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
