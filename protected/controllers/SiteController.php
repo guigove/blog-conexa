@@ -27,9 +27,15 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		$criteria=new CDbCriteria();
+		$criteria->limit = 12;
+		$criteria->order = 'p.id DESC';
+		$criteria->alias = 'p';
+		$posts = Post::model()->with('categoria')->findAll($criteria);
+		$this->render('index', array(
+			'posts' => $posts,
+
+		));
 	}
 
 	/**

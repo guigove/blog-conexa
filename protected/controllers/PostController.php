@@ -29,12 +29,12 @@ class PostController extends Controller
 		return array(
 			array(
 				'allow',  // allow all users to perform 'index' and 'view' actions
-				'actions' => array('index', 'view'),
+				'actions' => array('index', 'view','create'),
 				'users' => array('*'),
 			),
 			array(
 				'allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions' => array('create', 'update'),
+				'actions' => array('update'),
 				'users' => array('@'),
 			),
 			array(
@@ -74,11 +74,19 @@ class PostController extends Controller
 		if (isset($_POST['Post'])) {
 			$model->attributes = $_POST['Post'];
 			if ($model->save())
-				$this->redirect(array('view', 'id' => $model->id));
+				$this->redirect(array('index', 'id' => $model->id));
+		}
+
+		
+		$categorias = Categoria::model()->findAll();
+		$select= array(""=>'Selecione');
+		foreach($categorias as $c){
+			$select[$c->id]=$c->nome;
 		}
 
 		$this->render('create', array(
 			'model' => $model,
+			'categorias' => $select,
 		));
 	}
 
@@ -125,10 +133,21 @@ class PostController extends Controller
 	public function actionIndex()
 	{
 
-		$posts = Post::model()->with('categoria')->findAll();
+		$criteria=new CDbCriteria();
+		$criteria->order = 'p.id DESC';
+		$criteria->alias = 'p';
+
+		$count=Post::model()->count($criteria);
+		$paginas=new CPagination($count);
+		$paginas->pageSize=12;
+		$paginas->applyLimit($criteria);
+
+		$posts = Post::model()->with('categoria')->findAll($criteria);
+		
 
 		$this->render('index', array(
 			'posts' => $posts,
+			'paginas'=>$paginas,
 
 		));
 	}

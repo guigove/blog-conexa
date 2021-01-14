@@ -7,6 +7,7 @@
  * @property string $id
  * @property string $conteudo
  * @property string $post_id
+ * @property string $autor
  *
  * The followings are the available model relations:
  * @property Post $post
@@ -39,11 +40,12 @@ class Comentario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('conteudo, post_id', 'required'),
+			array('conteudo, post_id, autor', 'required'),
 			array('post_id', 'length', 'max'=>10),
+			array('autor', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, conteudo, post_id', 'safe', 'on'=>'search'),
+			array('id, conteudo, post_id, autor', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -68,6 +70,7 @@ class Comentario extends CActiveRecord
 			'id' => 'ID',
 			'conteudo' => 'Conteudo',
 			'post_id' => 'Post',
+			'autor' => 'Autor',
 		);
 	}
 
@@ -85,6 +88,7 @@ class Comentario extends CActiveRecord
 		$criteria->compare('id',$this->id,true);
 		$criteria->compare('conteudo',$this->conteudo,true);
 		$criteria->compare('post_id',$this->post_id,true);
+		$criteria->compare('autor',$this->autor,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

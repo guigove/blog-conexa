@@ -13,6 +13,11 @@
 	<?php echo CHtml::encode($data->conteudo); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('autor')); ?>:</b>
+	<?php echo CHtml::encode($data->autor); ?>
+	<br />
+
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('post_id')); ?>:</b>
 	<?php echo CHtml::encode($data->post_id); ?>
 	<br />

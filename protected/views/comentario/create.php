@@ -2,17 +2,15 @@
 /* @var $this ComentarioController */
 /* @var $model Comentario */
 
-$this->breadcrumbs=array(
-	'Comentarios'=>array('index'),
+$this->breadcrumbs = array(
+	'Comentarios' => array('index'),
 	'Create',
 );
 
-$this->menu=array(
-	array('label'=>'List Comentario', 'url'=>array('index')),
-	array('label'=>'Manage Comentario', 'url'=>array('admin')),
-);
+
 ?>
+<div class="container mt-3">
+	<h1 class="text-center">Criar Comentario</h1>
 
-<h1>Create Comentario</h1>
-
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+	<?php echo $this->renderPartial('_form', array('model' => $model, 'id' => Yii::app()->request->getQuery('post')))  ?>
+</div>

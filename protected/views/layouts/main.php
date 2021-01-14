@@ -24,59 +24,32 @@
 <body class="bg-light">
 
 	<div>
-		<header>
 
-			<div class="navbar navbar-dark bg-dark shadow-sm">
-				<div class="container d-flex justify-content-between">
-					<a href="#" class="navbar-brand d-flex align-items-center">
-						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false">
-							<path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
-							<circle cx="12" cy="13" r="4" />
-						</svg>
-						<strong>Conexa</strong>
-					</a>
-					<div class="navbar-text">
-						<?php $this->widget('zii.widgets.CMenu', array(
-							'items' => array(
-								array('label' => 'Home', 'url' => array('/site/index')),
-								array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
-								array('label' => 'Contact', 'url' => array('/site/contact')),
-								array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
-								array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
-							),
-							'htmlOptions' => array(
-								'class' => 'list-unstyled '
-							),
-							'itemCssClass' => 'nav-item d-inline-block ml-3 mt-3'
-						)); ?>
-					</div>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-				</div>
-			</div>
-			<div class="collapse bg-dark" id="navbarHeader">
-				<div class="container">
-					<div class="row">
-						<?php
-						foreach ($this->menu as $m) {
-						?>
-							<a class="nav-item ml-3" href="<?= Yii::app()->createUrl($this->actionParams['r'] . "/" . $m["url"][0])  ?>"> <?php echo $m["label"]; ?> </a>
-						<?php } ?>
+		<header>
+			<nav>
+				<div class="navbar navbar-dark bg-dark shadow-sm navbar-expand-lg">
+					<div class="container d-flex justify-content-between">
+						<a href="<?= Yii::app()->createUrl("site")  ?>" class="navbar-brand d-flex align-items-center ">
+							<strong>Conexa</strong>
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarNavDropdown">
+							<div class="navbar-nav">
+								<li class="nav-item active ">
+									<a class="nav-link" href="<?= Yii::app()->createUrl("site")  ?>">Home </a>
+								</li>
+								<li class="nav-item active ">
+									<a class="nav-link" href="<?= Yii::app()->createUrl("post")  ?>">Posts</a>
+								</li>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
+			</nav>
 		</header>
 
-
-
-
-		<?php if (isset($this->breadcrumbs)) : ?>
-			<?php /*$this->widget('zii.widgets.CBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); */ ?>
-			<!-- breadcrumbs -->
-		<?php endif ?>
 		<div class="container">
 
 			<?php echo $content; ?>
@@ -85,7 +58,7 @@
 
 		<div class="clear"></div>
 
-		<footer class="container">		
+		<footer class="container">
 			<p>&copy; Conexa &middot; <?php echo date('Y'); ?> </p>
 		</footer>
 
