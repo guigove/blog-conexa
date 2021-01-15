@@ -14,29 +14,49 @@ $this->menu = array(
 <div class="album py-5">
   <div class="container">
     <div class="row">
-      <div class="col-md-9">
+      <div class="col-md-8">
         <h1> Posts </h1>
       </div>
-      <div class="col-md-3">
-        <a href="<?= Yii::app()->createUrl("post/create") ?>" class="btn btn-block btn-dark">
+      <div class="col-md-4 text-right">
+        <a class="btn  btn-dark" data-toggle="collapse" href="#filtro" role="button" aria-expanded="false" aria-controls="collapseExample">
+         Filtro
+        </a>
+        <a href="<?= Yii::app()->createUrl("post/create") ?>" class="btn btn-dark">
           Criar Post
         </a>
       </div>
+
     </div>
+
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <?php $this->renderPartial('_search',array('model'=>new Post, 'categorias' => $categorias)); ?>
+      </div>
+    </div>
+
     <div class="row mt-4">
       <?php
+      if (empty($posts)) { ?>
+        <div class="col-md-4 mx-auto">
+          <div class="alert alert-danger text-center p5" role="alert">
+            Nenhum Post cadastrado
+          </div>
+        </div>
+      <?php
+      }
       foreach ($posts as $post) {
       ?>
         <div class="col-md-4 mx-auto my-2">
           <div class="card mb-4 shadow-sm h-100">
             <div class="card-header">
               <h4 class="card-text"><?php echo $post->titulo ?></h4>
+              <small class="text-muted">Categoria:<strong> <?php echo $post->categoria->nome ?></strong></small>
             </div>
             <div class="card-body">
               <p class="card-text">
                 <?php
-                if (strlen($post->conteudo) > 20) {
-                  $post->conteudo = substr($post->conteudo, 0, 20) . "...";
+                if (strlen($post->conteudo) > 30) {
+                  $post->conteudo = substr($post->conteudo, 0, 50) . "...";
                 }
                 echo $post->conteudo;
                 ?>

@@ -29,7 +29,7 @@ class PostController extends Controller
 		return array(
 			array(
 				'allow',  // allow all users to perform 'index' and 'view' actions
-				'actions' => array('index', 'view','create'),
+				'actions' => array('index', 'view', 'create'),
 				'users' => array('*'),
 			),
 			array(
@@ -77,11 +77,11 @@ class PostController extends Controller
 				$this->redirect(array('index', 'id' => $model->id));
 		}
 
-		
+
 		$categorias = Categoria::model()->findAll();
-		$select= array(""=>'Selecione');
-		foreach($categorias as $c){
-			$select[$c->id]=$c->nome;
+		$select = array("" => 'Selecione');
+		foreach ($categorias as $c) {
+			$select[$c->id] = $c->nome;
 		}
 
 		$this->render('create', array(
@@ -133,21 +133,43 @@ class PostController extends Controller
 	public function actionIndex()
 	{
 
-		$criteria=new CDbCriteria();
+
+		$criteria = new CDbCriteria();
 		$criteria->order = 'p.id DESC';
 		$criteria->alias = 'p';
+		
+		if (isset($_GET['Post'])) {
+			$filtro = $_GET['Post'];
+			$query = array();
+			if (!empty($filtro['data']))
+				array_push($query, "DATE(p.data) = '{$filtro['data']}'");
+			if (!empty($filtro['titulo']))
+				array_push($query, "p.titulo = '{$filtro['titulo']}'");
+			if (!empty($filtro['categoria_id']))
+				array_push($query, "p.categoria_id = '{$filtro['categoria_id']}'");
+	
+			$criteria->condition = join(' AND ', $query);
+		}
 
-		$count=Post::model()->count($criteria);
-		$paginas=new CPagination($count);
-		$paginas->pageSize=12;
+		$categorias = Categoria::model()->findAll();
+		$select = array("" => 'Selecione');
+		foreach ($categorias as $c) {
+			$select[$c->id] = $c->nome;
+		}
+
+
+		$count = Post::model()->count($criteria);
+		$paginas = new CPagination($count);
+		$paginas->pageSize = 12;
 		$paginas->applyLimit($criteria);
 
 		$posts = Post::model()->with('categoria')->findAll($criteria);
-		
+
 
 		$this->render('index', array(
 			'posts' => $posts,
-			'paginas'=>$paginas,
+			'paginas' => $paginas,
+			'categorias' => $select,
 
 		));
 	}

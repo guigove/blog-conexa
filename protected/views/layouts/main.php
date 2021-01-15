@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+	<title>Conexa - Blog</title>
 </head>
 
 <body class="bg-light">
@@ -50,17 +50,27 @@
 			</nav>
 		</header>
 
-		<div class="container">
-
+		<div class="container" id="topo">
 			<?php echo $content; ?>
 		</div>
 
 
 		<div class="clear"></div>
 
-		<footer class="container">
-			<p>&copy; Conexa &middot; <?php echo date('Y'); ?> </p>
+		<footer class="text-muted footer fixed-bottom bg-dark" style="height:40px;">
+			<div class="container-fluid">
+				<div class="container">
+					
+						<p class="float-right">
+							<a href="#topo">Voltar pro topo</a>
+						</p>
+						<p class="mt-2">&copy; Conexa &middot; <?php echo date('Y'); ?> </p>
+		
+				</div>
+
+			</div>
 		</footer>
+
 
 	</div><!-- page -->
 

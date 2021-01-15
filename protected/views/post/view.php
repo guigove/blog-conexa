@@ -24,6 +24,11 @@ $this->menu = array(
 					<?php echo $model->titulo; ?>
 				</h2>
 			</div>
+			<div class="col-md-12">
+				<small class="text-left">
+					Categoria: <strong><?php echo $model->categoria->nome; ?> </strong>
+				</small>
+			</div>
 			<div class="col-md-12 mt-4">
 				<p class="text-center">
 					<?php echo $model->conteudo; ?>
@@ -59,8 +64,7 @@ $this->menu = array(
 						</div>
 					</div>
 				</div>
-			<?php } ?>
-			<?php
+			<?php }
 			foreach ($model->comentarios as $c) {
 			?>
 				<div class="col-md-12 mt-2">

@@ -11,6 +11,14 @@ $this->pageTitle = Yii::app()->name;
 		<h1 class="text-center">Conexa Blog</h1>
 		<div class="row mt-4">
 			<?php
+			if (empty($posts)) { ?>
+				<div class="col-md-4 mx-auto">
+					<div class="alert alert-danger text-center" role="alert">
+						Nenhum Post cadastrado
+					</div>
+				</div>
+			<?php
+			}
 			foreach ($posts as $post) {
 			?>
 				<div class="col-md-4 mx-auto my-2">
@@ -21,8 +29,8 @@ $this->pageTitle = Yii::app()->name;
 						<div class="card-body">
 							<p class="card-text">
 								<?php
-								if (strlen($post->conteudo) > 20) {
-									$post->conteudo = substr($post->conteudo, 0, 20) . "...";
+								if (strlen($post->conteudo) > 30) {
+									$post->conteudo = substr($post->conteudo, 0, 50) . "...";
 								}
 								echo $post->conteudo;
 								?>
@@ -42,13 +50,21 @@ $this->pageTitle = Yii::app()->name;
 			<?php } ?>
 		</div>
 		<div class="row">
-			<div class="col-md-5"></div>
-			<div class="col-md-2  col-12">
-				<a href="<?= Yii::app()->createUrl("post")  ?>" class="btn btn-block btn-dark">
-					Ver mais
-				</a>
-			</div>
-			<div class="col-md-5"></div>
+			<?php
+			if (empty($posts)) { ?>
+				<div class="col-md-2  col-12 mx-auto">
+					<a href="<?= Yii::app()->createUrl("post/create") ?>" class="btn btn-block btn-dark">
+						Criar Post
+					</a>
+				</div>
+			<?php
+			} else { ?>
+				<div class="col-md-2  col-12 mx-auto my-4">
+					<a href="<?= Yii::app()->createUrl("post") ?>" class="btn btn-block btn-dark">
+						Ver mais
+					</a>
+				</div>
+			<?php } ?>
 		</div>
 	</div>
 </div>

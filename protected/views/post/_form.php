@@ -4,6 +4,8 @@
 /* @var $form CActiveForm */
 ?>
 
+
+
 <div class="form col-12 col-md-6 mx-auto">
 
 	<?php $form = $this->beginWidget('CActiveForm', array(
